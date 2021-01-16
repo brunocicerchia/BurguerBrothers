@@ -21,15 +21,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active text" aria-current="page" href="#hamburguesa"><h5 class="texto-header">Ver Hamburguesas</h5></a>
+                  <a class="nav-link active text d-none d-lg-block" aria-current="page" href="#hamburguesa"><h5 class="texto-header">Ver Hamburguesas</h5></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active text" aria-current="page" href="#"><h5 class="texto-header">Conocenos</h5></a>
+                  <a class="nav-link active text d-lg-none" aria-current="page" href="#hamburguesas"><h5 class="texto-header">Ver Hamburguesas</h5></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text" aria-current="page" href="#envios"><h5 class="texto-header">Envios</h5></a>
                 </li>
               </ul>
-              <form class="d-flex">
-                <button class="btn btn-outline-light" type="submit">Hacer tu pedido online!</button>
-              </form>
+              <div class="d-flex">
+                  <a href="/pedidos.html"><button class="btn btn-outline-light" type="submit">Hacer tu pedido online!</button></a>
+              </div> 
             </div>
           </div>
         </nav>
@@ -39,7 +42,7 @@
             <div class="col-md-6" style="display: flex; align-items: center; justify-content: center; margin-top: 50px; max-height: 50vh;">
               <div class="container">
                 <div class="row">
-                  <h1 style="color:#E6E6E6;" class="texto-header text-center">Hamburguesas de calidad</h1>
+                  <h1 style="color:#E6E6E6; text-decoration: underline;" class="texto-header text-center">Hamburguesas de calidad</h1>
                 </div>
                 <div class="row">
                   <h5 style="color:#E6E6E6;" class="texto-header text-center">Vivi una experiencia gastronomica inolvidable!</h5>
@@ -64,9 +67,9 @@
         </div>
     </div>
     <!-- Body -->
-    <hr class="d-none d-lg-block" style="background-color: #FFFFFF; margin-top: 100px;" size="10" noshade="noshade">
+    <hr class="d-none d-lg-block" style="background-color: #FFFFFF; margin-top: 100px;" size="10" noshade="noshade" id="hamburguesa">
     <!-- Solo se muestra en pantallas => LG -->
-    <div class="d-none d-lg-block" style="margin-top: 100px;" id="hamburguesa">
+    <div class="d-none d-lg-block" style="margin-top: 100px;">
       <div class="container mt-md-100">
         <div class="row">
           <div class="col-md-12">
@@ -81,7 +84,7 @@
               <img src="images/stone.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Stone Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar!</p>
               </div>
             </div>
           </div>
@@ -90,7 +93,8 @@
               <img src="images/kiss.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Kiss Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, Parmesano, Mozzarella, Queso Crema, Roquefot y doble hamburguesa!
+                </p>
               </div>
             </div>
           </div>
@@ -99,7 +103,7 @@
               <img src="images/queen.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Queen Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, Queso Dambo, Tomate, Lechuga y doble hamburguesa(200Grs)!</p>
               </div>
             </div>
           </div>        
@@ -112,7 +116,7 @@
               <img src="images/pink.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Pink Floyd Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, Chedar, Ketchup y una hamburguesa de 100Grs! Un clasico...</p>
               </div>
             </div>
           </div>
@@ -121,7 +125,7 @@
               <img src="images/nirvana.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Nirvana Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, triple hamburguesa, trile Chedar y Ketchup!</p>
               </div>
             </div>
           </div>   
@@ -130,7 +134,7 @@
               <img src="images/chili.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Chili Peppers Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Mayonesa de palta, doble carne, cheddar, nachos, queso crema, tomate cherry, morron salteado y Salsa picante!</p>
               </div>
             </div>
           </div>   
@@ -143,7 +147,7 @@
               <img src="images/elvis.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Elvis Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, Cebolla caramelizada, Huevo frito, Queso dambo, doble hamburguesa(200Grs) y Cheddar</p>
               </div>
             </div>
           </div>
@@ -152,7 +156,7 @@
               <img src="images/beatle.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Beatle Burger</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pan casero, Ketchup y cebolla, doble hamburguesa(200Grs) y Cheddar</p>
               </div>
             </div>
           </div>        
@@ -161,7 +165,7 @@
               <img src="images/crispy.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Crispys Pollo Frito</h5>
-                <p class="card-text texto-body">Pan casero, bacon, ketchup y barbacoa, doble hamburguesa(200Grs) y Cheddar</p>
+                <p class="card-text texto-body">Pollo frito rebozado acompañado con salsas y papas fritas incluidas!</p>
               </div>
             </div>
           </div>         
@@ -169,7 +173,7 @@
       </div>
   </div>  
   <!-- Solo se muestra en tablets y mobile -->
-  <div class="d-lg-none" id="hamburguesa">
+  <div class="d-lg-none" id="hamburguesas">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
@@ -254,12 +258,12 @@
   <div class="container-fluid " style="margin-top: 50px; background-color: #FFFFFF;">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center" style="margin-top: 20px; margin-bottom: 20px;">
-        <button class="btn btn-dark" type="submit">Hacer tu pedido online!</button>
+        <a href="/pedidos.html"><button class="btn btn-dark" type="submit">Hacer tu pedido online!</button></a>
       </div>
     </div>
   </div>
   <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center" id="envios">
       <div class="col-md-5 text-center d-flex align-items-center">
         <div class="row row-cols-1">
           <div class="col">

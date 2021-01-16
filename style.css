@@ -60,3 +60,14 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   } 
+
+.metodoPago {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.card {
+  margin: 0 auto; 
+  float: none; 
+  margin-bottom: 10px; 
+}
