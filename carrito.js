@@ -74,7 +74,24 @@ function arteRange(val) {
     document.getElementById('arteInput').value=val;
 }
 
+var metodoPago = "Efectivo"
+
+function mercadoPago() {
+    metodoPago = "Mercado Pago"
+}
+
+function efectivo() {
+    metodoPago = "Efectivo"
+}
+
 function enviarPedido() {
+
+    var mensajeFinal;
+
+    //Obtener nombre usuario
+
+    var nombre = document.getElementById('nombre').value;
+    mensajeFinal = "Nombre: " + nombre + "\n"
 
     //Numero productos
     var stone = document.getElementById('stoneInput').value;
@@ -94,32 +111,84 @@ function enviarPedido() {
     var arte = document.getElementById('arteInput').value;
 
     //Mensaje de cada producto
-    var stoneMensaje = "Stone Burger(" + stone + ")"
-    var kissMensaje = "Kiss Burger(" + kiss + ")"
-    var queenMensaje = "Queen Burger(" + queen + ")"
-    var pinkMensaje = "Pink Floyd Burger(" + pink + ")"
-    var nirvanaMensaje = "Nirvana Burger(" + nirvana + ")"
-    var chiliMensaje = "Chili Peppers Burger(" + chili + ")"
-    var elvisMensaje = "Elvis Burger(" + elvis + ")"
-    var beatleMensaje = "Beatle Burger(" + beatle + ")"
-    var crispyMensaje = "Crispys Pollo Frito(" + crispy + ")"
-    var cheddarMensaje = "Papas Cheddar(" + cheddar + ")"
-    var picadaMensaje = "Picada para dos(" + picada + ")"
-    var muzaMensaje = "Bastones de muzzarella(" + muza + ")"
-    var cocaMensaje = "Coca Cola 1.5L(" + coca + ")"
-    var spriteMensaje = "Sprite(" + sprite + ")"
-    var arteMensaje = "Cerveza artesanal(" + arte + ")"
+    var stoneMensaje = "Stone Burger(" + stone + ") \n"
+    var kissMensaje = "Kiss Burger(" + kiss + ") \n"
+    var queenMensaje = "Queen Burger(" + queen + ") \n"
+    var pinkMensaje = "Pink Floyd Burger(" + pink + ") \n"
+    var nirvanaMensaje = "Nirvana Burger(" + nirvana + ") \n"
+    var chiliMensaje = "Chili Peppers Burger(" + chili + ") \n"
+    var elvisMensaje = "Elvis Burger(" + elvis + ") \n"
+    var beatleMensaje = "Beatle Burger(" + beatle + ") \n"
+    var crispyMensaje = "Crispys Pollo Frito(" + crispy + ") \n"
+    var cheddarMensaje = "Papas Cheddar(" + cheddar + ") \n"
+    var picadaMensaje = "Picada para dos(" + picada + ") \n"
+    var muzaMensaje = "Bastones de muzzarella(" + muza + ") \n"
+    var cocaMensaje = "Coca Cola 1.5L(" + coca + ") \n"
+    var spriteMensaje = "Sprite(" + sprite + ") \n"
+    var arteMensaje = "Cerveza artesanal(" + arte + ") \n"
 
-    var mensaje;
-
-    var pedidoFinal = ""
+    //Se busca que productos se pidio
+    var pedidoFinal = "";
 
     if(stone != 0) {
-        pedidoFinal + stoneMensaje
+        pedidoFinal = pedidoFinal +  stoneMensaje        
     }
     if(kiss != 0) {
-        pedidoFinal + kissMensaje
+        pedidoFinal = pedidoFinal +  kissMensaje
+    }
+    if(queen != 0) {
+        pedidoFinal = pedidoFinal +  queenMensaje
+    }
+    if(pink != 0) {
+        pedidoFinal = pedidoFinal +  pinkMensaje
+    }
+    if(nirvana != 0) {
+        pedidoFinal = pedidoFinal +  nirvanaMensaje
+    }
+    if(chili != 0) {
+        pedidoFinal = pedidoFinal +  chiliMensaje
+    }
+    if(elvis != 0) {
+        pedidoFinal = pedidoFinal +  elvisMensaje
+    }
+    if(beatle != 0) {
+        pedidoFinal = pedidoFinal +  beatleMensaje
+    }
+    if(crispy != 0) {
+        pedidoFinal = pedidoFinal +  crispyMensaje
+    }
+    if(cheddar != 0) {
+        pedidoFinal = pedidoFinal +  cheddarMensaje
+    }
+    if(picada != 0) {
+        pedidoFinal = pedidoFinal +  picadaMensaje
+    }
+    if(muza != 0) {
+        pedidoFinal = pedidoFinal +  muzaMensaje
+    }
+    if(coca != 0) {
+        pedidoFinal = pedidoFinal +  cocaMensaje
+    }
+    if(sprite != 0) {
+        pedidoFinal = pedidoFinal +  spriteMensaje
+    }
+    if(arte != 0) {
+        pedidoFinal = pedidoFinal +  arteMensaje
     }
 
-    console.log(pedidoFinal)
+    mensajeFinal = mensajeFinal + "Pedido:\n" + pedidoFinal
+
+    //Obtener direccion
+    var direccion = document.getElementById('direccion').value;
+    mensajeFinal = mensajeFinal + "Direccion:\n" + direccion + "\n"
+
+    //obtener metodo de pago
+    mensajeFinal = mensajeFinal + "Metodo de pago:\n" + metodoPago
+
+    console.log(mensajeFinal)
+
+    //Creacion URL Whatsapp
+    var mensajeEncoded = encodeURIComponent(mensajeFinal)
+    var urlFinal = "https://api.whatsapp.com/send?phone=5493489694795&text=" + mensajeEncoded
+    window.open(urlFinal)
 }

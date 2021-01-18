@@ -34,6 +34,14 @@
     <div class="container" style="margin-top: 50px;">
       <div class="row">
         <div class="col-md-12">
+          <h3 style="color: #FFFFFF;" class="texto-header text-center">Ingresa tu nombre!</h3>
+          <input type="text" id="nombre" class="form-control w-75 d-flex mx-auto" placeholder="Ingresa aqui tu nombre o apodo">
+        </div>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+      <div class="row">
+        <div class="col-md-12">
           <h5 class="texto-header text-center" style="color:#FFFFFF;">HAMBURGUESAS</h5>
         </div>
       </div>
@@ -81,7 +89,7 @@
       <div class="container-fluid d-flex justify-content-center py-3">
         <div class="row">
           <div class="col-md-4">
-            <div class="card h-100" style="width: 18rem;">
+            <div class="card" style="width: 18rem;">
               <img src="images/pink.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title texto-header">Pink Floyd Burger</h5>
@@ -253,13 +261,13 @@
       </div>
       <div class="container d-flex justify-content-center">
         <div class="form-check" style="margin: 10px;">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="efectivo()" checked>
           <label class="form-check-label texto-header" style="color: #FFFFFF;" for="exampleRadios1">
             EFECTIVO
           </label>
         </div>
         <div class="form-check" style="margin: 10px;">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="mercadoPago()">
           <label class="form-check-label texto-header" style="color: #FFFFFF;" for="exampleRadios1">
             MERCADO PAGO
           </label>
@@ -269,7 +277,7 @@
         <div class="row">
           <div class="col-md-12">
             <h3 style="color: #FFFFFF;" class="texto-header text-center">Eleji tu dirección!</h3>
-            <input type="text" class="form-control w-75 d-flex mx-auto" placeholder="Ingresa aqui la dirección">
+            <input type="text" id="direccion" class="form-control w-75 d-flex mx-auto" placeholder="Ingresa aqui la dirección">
           </div>
         </div>
       </div>
