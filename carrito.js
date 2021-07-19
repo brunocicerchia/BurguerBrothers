@@ -189,6 +189,6 @@ function enviarPedido() {
 
     //Creacion URL Whatsapp
     var mensajeEncoded = encodeURIComponent(mensajeFinal)
-    var urlFinal = "https://api.whatsapp.com/send?phone=5493489694795&text=" + mensajeEncoded
+    var urlFinal = "https://api.whatsapp.com/send?phone=&text=" + mensajeEncoded
     window.open(urlFinal)
 }
